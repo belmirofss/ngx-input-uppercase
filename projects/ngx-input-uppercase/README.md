@@ -1,24 +1,36 @@
-# NgxInputUppercase
+# ngx-input-uppercase
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+You know that input you need to uppercase it? So, do it extremely simply!
 
-## Code scaffolding
 
-Run `ng generate component component-name --project ngx-input-uppercase` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-input-uppercase`.
-> Note: Don't forget to add `--project ngx-input-uppercase` or else it will be added to the default project in your `angular.json` file. 
+### Install
 
-## Build
+```
 
-Run `ng build ngx-input-uppercase` to build the project. The build artifacts will be stored in the `dist/` directory.
+$ npm i ngx-input-uppercase --save
 
-## Publishing
+````
 
-After building your library with `ng build ngx-input-uppercase`, go to the dist folder `cd dist/ngx-input-uppercase` and run `npm publish`.
 
-## Running unit tests
+### How to use?
 
-Run `ng test ngx-input-uppercase` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##### Import the module into your module:
 
-## Further help
+```javascript
+// module.ts
+import { NgxInputUppercaseModule } from 'ngx-input-uppercase';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@NgModule({
+	imports: [
+		NgxInputUppercaseModule
+	]
+})
+export class YourModule { }
+
+````
+
+##### Put in your input:
+
+```html
+<input ngxInputUppercase>
+```

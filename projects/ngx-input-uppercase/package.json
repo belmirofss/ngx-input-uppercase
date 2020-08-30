@@ -1,9 +1,20 @@
 {
   "name": "ngx-input-uppercase",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^6.0.0",
     "@angular/core": "^6.0.0",
     "tslib": "^1.10.0"
-  }
+  },
+  "keywords": [
+    "angular",
+    "uppercase",
+    "directive",
+    "ngx-input-uppercase",
+    "input uppercase",
+    "input",
+    "upper case"
+  ],
+  "author": "Belmiro Flávio <belmirofss@gmail.com>",
+  "license": "MIT"
 }

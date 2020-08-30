@@ -1,27 +1,36 @@
-# NgxInputUppercaseWorkspace
+# ngx-input-uppercase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
+You know that input you need to uppercase it? So, do it extremely simply!
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Install
 
-## Code scaffolding
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+$ npm i ngx-input-uppercase --save
 
-## Build
+````
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+### How to use?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##### Import the module into your module:
 
-## Running end-to-end tests
+```javascript
+// module.ts
+import { NgxInputUppercaseModule } from 'ngx-input-uppercase';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@NgModule({
+	imports: [
+		NgxInputUppercaseModule
+	]
+})
+export class YourModule { }
 
-## Further help
+````
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+##### Put in your input:
+
+```html
+<input ngxInputUppercase>
+```
