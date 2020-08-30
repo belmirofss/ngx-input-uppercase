@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-input-uppercase": [
+        "dist/ngx-input-uppercase/ngx-input-uppercase",
+        "dist/ngx-input-uppercase"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
