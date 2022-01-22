@@ -1,10 +1,12 @@
 {
   "name": "ngx-input-uppercase",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "peerDependencies": {
     "@angular/common": "^6.0.0",
-    "@angular/core": "^6.0.0",
-    "tslib": "^1.10.0"
+    "@angular/core": "^6.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
   },
   "keywords": [
     "angular",
@@ -13,7 +15,15 @@
     "ngx-input-uppercase",
     "input uppercase",
     "input",
-    "upper case"
+    "upper case",
+    "ng2",
+    "ngx",
+    "angular2",
+    "angular4",
+    "angular6",
+    "angular8",
+    "angular10",
+    "angular12"
   ],
   "author": "Belmiro Flávio <belmirofss@gmail.com>",
   "license": "MIT"

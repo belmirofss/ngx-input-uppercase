@@ -8,24 +8,26 @@ selector: '[ngxInputUppercase]',
 })
 export class NgxInputUppercaseDirective {
 
-  lastValue: string;
+  private _lastValue: string = '';
 
-  constructor(public ref: ElementRef) { }
+  constructor(
+    private _ref: ElementRef
+  ) { }
 
-  @HostListener('input', ['$event']) onInput($event) 
-  {
-    const start = $event.target.selectionStart;
-    const end = $event.target.selectionEnd;
-    $event.target.value = $event.target.value.toUpperCase();
-    $event.target.setSelectionRange(start, end);
-    $event.preventDefault();
+  @HostListener('input', ['inputEvent']) onInput(inputEvent: any) {
+    const selectionPositionStart = inputEvent.target.selectionStart;
+    const selectionPositionEnd = inputEvent.target.selectionEnd;
 
-    if (!this.lastValue || (this.lastValue && $event.target.value.length > 0 && this.lastValue !== $event.target.value)) {
-      this.lastValue = this.ref.nativeElement.value = $event.target.value;
-      // Propagation
-      const evt = document.createEvent('HTMLEvents');
-      evt.initEvent('input', false, true);
-      event.target.dispatchEvent(evt);
+    inputEvent.target.value = inputEvent.target.value.toUpperCase();
+    inputEvent.target.setSelectionRange(selectionPositionStart, selectionPositionEnd);
+    inputEvent.preventDefault();
+
+    if (!this._lastValue || (this._lastValue && inputEvent.target.value.length > 0 && this._lastValue !== inputEvent.target.value)) {
+      this._lastValue = this._ref.nativeElement.value = inputEvent.target.value;
+
+      const htmlEvent = document.createEvent('HTMLEvents');
+      htmlEvent.initEvent('input', false, true);
+      event?.target?.dispatchEvent(htmlEvent);
     }
   }
 }

@@ -1,4 +1,4 @@
-# ngx-input-uppercase
+# ngx-input-uppercase | Angular 6+
 
 You know that input you need to uppercase it? So, do it extremely simply!
 
